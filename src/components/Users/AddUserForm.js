@@ -16,6 +16,12 @@ const AddUserForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (enteredUsername.trim().length === 0 || enteredAge.trim().length === 0) {
+      return;
+    }
+    if (+enteredAge < 1) {
+      return;
+    }
     setEnteredUsername("");
     setEnteredAge("");
   };
