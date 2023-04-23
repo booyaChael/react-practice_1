@@ -1,5 +1,6 @@
 import classes from "./AddUserForm.module.css";
 import Card from "../UI/Card";
+import Button from "../UI/Button";
 const AddUserForm = () => {
   return (
     <Card>
@@ -8,6 +9,7 @@ const AddUserForm = () => {
         <input id="username" type="text" />
         <label htmlFor={"age"}>Age</label>
         <input id="age" type="number" />
+        <Button type="submit">Add User</Button>
       </form>
     </Card>
   );
