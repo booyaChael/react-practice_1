@@ -2,7 +2,7 @@ import classes from "./AddUserForm.module.css";
 import Card from "../UI/Card";
 import Button from "../UI/Button";
 import { useState } from "react";
-const AddUserForm = () => {
+const AddUserForm = (props) => {
   const [enteredUsername, setEnteredUsername] = useState("");
   const [enteredAge, setEnteredAge] = useState("");
 
@@ -22,6 +22,7 @@ const AddUserForm = () => {
     if (+enteredAge < 1) {
       return;
     }
+    props.onAddUser(enteredUsername, enteredAge);
     setEnteredUsername("");
     setEnteredAge("");
   };
